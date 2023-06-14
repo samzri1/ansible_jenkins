@@ -1,5 +1,5 @@
 - name:              install apache2
-  remote_user:                                        sam
+  remote_user:                                        azureuser
   hosts:                                              mysqlserver
   become:                                                  true
   become_user:                                             root
