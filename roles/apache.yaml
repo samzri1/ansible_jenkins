@@ -1,6 +1,6 @@
 - name:              install apache2
   remote_user:                                        sam
-  hosts:                                              mysql
+  hosts:                                              mysqlserver
   become:                                                  true
   become_user:                                             root
   gather_facts:                                            true
