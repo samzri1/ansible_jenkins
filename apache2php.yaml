@@ -1,0 +1,21 @@
+- name: install apache2
+  remote_user: obaba
+  hosts: webserver
+# become: true
+# become_user: root
+# gather_facts: true
+  become: yes
+  tasks:
+    - name: "preforme sudo actions with obaba"
+      lineinfile: dest=/etc/resolv.conf line="Modified with non-root user"
+    - name: "Install apache2"
+      package:
+        name: apache2
+        state: present
+    - name: "Inatall php"
+      package:
+        name:
+          - php
+          - php-cli
+          - php-gd
+        state: present
