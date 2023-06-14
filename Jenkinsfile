@@ -3,6 +3,6 @@ node{
   git branch: 'main', url: 'https://github.com/samzri1/ansible_jenkins'
   }
  stage('Ansible') {
-  sh 'ansible-playbook -i mon_inventaire.ini Main_Playbook.yaml'
+  sh 'ansible-playbook roles/* -i mon_inventaire.ini'
   }
 }
