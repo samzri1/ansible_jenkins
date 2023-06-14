@@ -1,8 +1,1 @@
-- name: Deploy to Azure
-  hosts: mysql
-  tasks:
-    - name: Install Apache
-      apt:
-        name: apache2
-        state: present
-      become: yes
+
