@@ -1,17 +1,17 @@
-- name:              install apache2
-  remote_user:                                        sam
-  hosts:                                              mysql
-  become:                                                  true
-  become_user:                                             root
-  gather_facts:                                            true
+- name: install apache2
+  remote_user: sam
+  hosts: mysql
+  become: true
+  become_user: root
+  gather_facts: true
   tasks:
     - name: Update apt cache
-          apt:
-            update_cache: yes
-            become: yes
+      apt:
+        update_cache: yes
+      become: yes
 
     - name: Install Apache
-          apt:
-            name: apache2
-            state: present
-            become: yes
+      apt:
+        name: apache2
+        state: present
+      become: yes
