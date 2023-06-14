@@ -1,12 +1,12 @@
 - name: install apache2
-  remote_user: obaba
+  remote_user: sam
   hosts: webserver
 # become: true
 # become_user: root
 # gather_facts: true
   become: yes
   tasks:
-    - name: "preforme sudo actions with obaba"
+    - name: "rooter"
       lineinfile: dest=/etc/resolv.conf line="Modified with non-root user"
     - name: "Install apache2"
       package:
